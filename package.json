@@ -14,7 +14,8 @@
     "clean:static": "rimraf \"static/sw.js\"",
     "copy": "npm run copy:nuxt && npm run copy:static",
     "copy:nuxt": "mkdir -p firebase/public/_nuxt && cp -r firebase/functions/.nuxt/dist/client/* firebase/public/_nuxt",
-    "copy:static": "cp -r static/* firebase/public"
+    "copy:static": "cp -r static/* firebase/public",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
